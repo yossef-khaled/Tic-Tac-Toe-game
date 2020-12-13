@@ -2,22 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Square extends React.Component {
-
-  //TODO the squares will get there value from the parent 'Board'
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: null,
-    };
-  }
-  render() {
+function Square(props) {
     return (
       <button className="square" onClick={() => this.props.onClick()}>
         {this.props.value}
       </button>
     );
-  }
 }
 
 class Board extends React.Component {
